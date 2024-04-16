@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div>
+    <div id='chart' class='chart'”>
+        <script type='text/javascript'>
+            var graphs = {{bar | safe}};
+            Plotly.plot('chart',graphs,{});
+        </script>
+    </div>
+</div>
+
+
+    
+{% endblock %}
