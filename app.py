@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # SQL Lite DB for login information.
 def connect_db():
-    conn = sqlite3.connect('data/dashboard.db')
+    conn = sqlite3.connect('dashboard.db')
     cursor = conn.cursor()
 
     cursor.executescript('''
